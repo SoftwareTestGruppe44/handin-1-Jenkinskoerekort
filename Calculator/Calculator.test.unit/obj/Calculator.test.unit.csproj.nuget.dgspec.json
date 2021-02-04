@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj": {}
+    "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj": {}
   },
   "projects": {
-    "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj": {
+    "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
+        "projectUniqueName": "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
         "projectName": "Calculator.test.unit",
-        "projectPath": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
-        "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-        "outputPath": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\obj\\",
+        "projectPath": "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
+        "packagesPath": "C:\\Users\\BL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj": {
-                "projectPath": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj"
+              "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj": {
+                "projectPath": "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj"
               }
             }
           }
@@ -76,17 +76,17 @@
         }
       }
     },
-    "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj": {
+    "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
-        "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-        "outputPath": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\obj\\",
+        "projectPath": "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
+        "packagesPath": "C:\\Users\\BL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BL\\Documents\\GitHub\\SoftwareTestGruppe44\\handin-1-Jenkinskoerekort\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
