@@ -11,16 +11,16 @@ C:\4-semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netc
 C:\4-semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.dll
 C:\4-semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.pdb
 C:\4-semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.genruntimeconfig.cache
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.exe
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.deps.json
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.runtimeconfig.json
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.runtimeconfig.dev.json
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.dll
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.pdb
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.csprojAssemblyReference.cache
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.AssemblyInfoInputs.cache
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.AssemblyInfo.cs
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.csproj.CoreCompileInputs.cache
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.dll
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.pdb
-C:\SW\4semester\SWT\GIT\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.genruntimeconfig.cache
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.exe
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.deps.json
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.runtimeconfig.json
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.runtimeconfig.dev.json
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.dll
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.pdb
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.csprojAssemblyReference.cache
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.AssemblyInfoInputs.cache
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.AssemblyInfo.cs
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.csproj.CoreCompileInputs.cache
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.dll
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.pdb
+C:\IKT - 4. semester\4. semester\SWT\handin-1-Jenkinskoerekort\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.genruntimeconfig.cache
