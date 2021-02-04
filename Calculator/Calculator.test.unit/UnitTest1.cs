@@ -24,25 +24,16 @@ namespace TestProgram
         {
             Assert.AreEqual(_testCalculator.Add(a, b), result);
         }
-        
-        [Test]
-        [Category("SubTract")]
-        public void Subtract300And100_200()
-        {
-            Assert.AreEqual(_testCalculator.Subtract(300, 100), 200);
-        }
 
-        [Test]
+        [TestCase(300, 100, 200)]
+        [TestCase(30, -10, 40)]
+        [TestCase(-30, -20, -10)]
+        [TestCase(30.4, 20.2, 10.2)]
+        [TestCase(-30.5, -25, -5.5)]
         [Category("SubTract")]
-        public void Subtract30AndNegative10_40()
+        public void Subtract_PositiveAndNegative_ResultIsRight(double a, double b, double result)
         {
             Assert.AreEqual(_testCalculator.Subtract(30, -10), 40);
-        }
-        [Test]
-        [Category("SubTract")]
-        public void SubtractNegative30AndNegative20_negative10()
-        {
-            Assert.AreEqual(_testCalculator.Subtract(-30, -20), -10);
         }
 
         [Test]
@@ -50,6 +41,12 @@ namespace TestProgram
         public void Subtract30Dot4and20Dot2_10Dot2()
         {
             Assert.AreEqual(_testCalculator.Subtract(30.4, 20.2), 10.2);
+        }
+        [Test]
+        [Category("Multiply")]
+        public void Multiply2and5_10()
+        {
+            Assert.AreEqual(_testCalculator.Multiply(2, 5), 10);
         }
 
         [Test]
