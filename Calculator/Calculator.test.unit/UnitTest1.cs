@@ -4,7 +4,7 @@ using NUnit.Framework.Internal;
 
 namespace TestProgram
 {
-    public class Tests
+    public class CalculatorTests
     {
         private TheCalculator _testCalculator;
         [SetUp]
@@ -12,32 +12,19 @@ namespace TestProgram
         {
             _testCalculator = new TheCalculator();
         }
-        [Test]
-        [Category("Add")]
-        public void Add100and300_400()
-        {
-            Assert.AreEqual(_testCalculator.Add(100, 300), 400);
-        }
 
-        [Test]
+        [TestCase(100, 200, 300)]
+        [TestCase(200, 100, 300)]
+        [TestCase(100, -50, 50)]
+        [TestCase(-50, 100, 50)]
+        [TestCase(10.75, -5.5, 5.25)]
+        [TestCase(-10.75, 5.5, -5.25)]
         [Category("Add")]
-        public void AddNegative20AndNegative30_Negative50()
+        public void Add_positiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
-            Assert.AreEqual(_testCalculator.Add(-20, -30), -50);
+            Assert.AreEqual(_testCalculator.Add(a, b), result);
         }
-
-        [Test]
-        [Category("Add")]
-        public void Add40AndNegative20()
-        {
-            Assert.AreEqual(_testCalculator.Add(40, -20), 20);
-        }
-        [Test]
-        [Category("Add")]
-        public void Add30Dot5And50Dot3_80Dot8()
-        {
-            Assert.AreEqual(_testCalculator.Add(30.5, 50.3), 80.8);
-        }
+        
         [Test]
         [Category("SubTract")]
         public void Subtract300And100_200()
