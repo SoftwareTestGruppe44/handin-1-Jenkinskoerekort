@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj": {}
+    "C:\\SW\\4semester\\SWT\\GIT\\Calculator\\Calculator\\Calculator.csproj": {}
   },
   "projects": {
-    "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj": {
+    "C:\\SW\\4semester\\SWT\\GIT\\Calculator\\Calculator\\Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "C:\\SW\\4semester\\SWT\\GIT\\Calculator\\Calculator\\Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
-        "packagesPath": "C:\\Users\\rasmu\\.nuget\\packages\\",
-        "outputPath": "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\obj\\",
+        "projectPath": "C:\\SW\\4semester\\SWT\\GIT\\Calculator\\Calculator\\Calculator.csproj",
+        "packagesPath": "C:\\Users\\Mikkel\\.nuget\\packages\\",
+        "outputPath": "C:\\SW\\4semester\\SWT\\GIT\\Calculator\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rasmu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mikkel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
