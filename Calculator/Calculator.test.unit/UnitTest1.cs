@@ -4,7 +4,7 @@ using NUnit.Framework.Internal;
 
 namespace TestProgram
 {
-    public class Tests
+    public class CalculatorTests
     {
         private TheCalculator _testCalculator;
         [SetUp]
@@ -12,50 +12,28 @@ namespace TestProgram
         {
             _testCalculator = new TheCalculator();
         }
-        [Test]
+
+        [TestCase(100, 200, 300)]
+        [TestCase(200, 100, 300)]
+        [TestCase(100, -50, 50)]
+        [TestCase(-50, 100, 50)]
+        [TestCase(10.75, -5.5, 5.25)]
+        [TestCase(-10.75, 5.5, -5.25)]
         [Category("Add")]
-        public void Add100and300_400()
+        public void Add_positiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
-            Assert.AreEqual(_testCalculator.Add(100, 300), 400);
+            Assert.AreEqual(_testCalculator.Add(a, b), result);
         }
 
-        [Test]
-        [Category("Add")]
-        public void AddNegative20AndNegative30_Negative50()
-        {
-            Assert.AreEqual(_testCalculator.Add(-20, -30), -50);
-        }
-
-        [Test]
-        [Category("Add")]
-        public void Add40AndNegative20()
-        {
-            Assert.AreEqual(_testCalculator.Add(40, -20), 20);
-        }
-        [Test]
-        [Category("Add")]
-        public void Add30Dot5And50Dot3_80Dot8()
-        {
-            Assert.AreEqual(_testCalculator.Add(30.5, 50.3), 80.8);
-        }
-        [Test]
+        [TestCase(300, 100, 200)]
+        [TestCase(30, -10, 40)]
+        [TestCase(-30, -20, -10)]
+        [TestCase(30.4, 20.2, 10.2)]
+        [TestCase(-30.5, -25, -5.5)]
         [Category("SubTract")]
-        public void Subtract300And100_200()
-        {
-            Assert.AreEqual(_testCalculator.Subtract(300, 100), 200);
-        }
-
-        [Test]
-        [Category("SubTract")]
-        public void Subtract30AndNegative10_40()
+        public void Subtract_PositiveAndNegative_ResultIsRight(double a, double b, double result)
         {
             Assert.AreEqual(_testCalculator.Subtract(30, -10), 40);
-        }
-        [Test]
-        [Category("SubTract")]
-        public void SubtractNegative30AndNegative20_negative10()
-        {
-            Assert.AreEqual(_testCalculator.Subtract(-30, -20), -10);
         }
 
         [Test]
@@ -73,16 +51,23 @@ namespace TestProgram
 
         [Test]
         [Category("Multiply")]
-        public void MultiplyNegative5andNegative4_20()
+        [TestCase(5, 10, 50)]
+        [TestCase(10, 5, 50)]
+        [TestCase(5.5,10.5,57.75)]
+        [TestCase(10.5, 5.5, 57.75)]
+        [TestCase(-5, -4, 20)]
+        [TestCase(-4, -5, 20)]
+        [TestCase(-5.5, -10.5, 57.75)]
+        [TestCase(-10.5, -5.5, 57.75)]
+        [TestCase(10, -10, -100)]
+        [TestCase(-10,10,-100)]
+        [TestCase(10, -10.5, -105)]
+        [TestCase(-10.5, 10, -105)]
+        [TestCase(10.5, -5, -52.5)]
+        [TestCase(-5, 10.5, -52.5)]
+        public void Multiply_PositiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
-            Assert.AreEqual(_testCalculator.Multiply(-5, -4), 20);
-        }
-
-        [Test]
-        [Category("Multiply")]
-        public void Multiply10andNegative10_Negative100()
-        {
-            Assert.AreEqual(_testCalculator.Multiply(10, -10), -100);
+            Assert.AreEqual(_testCalculator.Multiply(a, b), result);
         }
 
         [TestCase(5,2,25)]
