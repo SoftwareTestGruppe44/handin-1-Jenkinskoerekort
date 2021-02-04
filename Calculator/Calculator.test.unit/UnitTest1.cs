@@ -37,19 +37,6 @@ namespace TestProgram
         }
 
         [Test]
-        [Category("SubTract")]
-        public void Subtract30Dot4and20Dot2_10Dot2()
-        {
-            Assert.AreEqual(_testCalculator.Subtract(30.4, 20.2), 10.2);
-        }
-        [Test]
-        [Category("Multiply")]
-        public void Multiply2and5_10()
-        {
-            Assert.AreEqual(_testCalculator.Multiply(2, 5), 10);
-        }
-
-        [Test]
         [Category("Multiply")]
         [TestCase(5, 10, 50)]
         [TestCase(10, 5, 50)]
