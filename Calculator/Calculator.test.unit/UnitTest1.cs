@@ -73,32 +73,18 @@ namespace TestProgram
             Assert.AreEqual(_testCalculator.Multiply(a, b), result);
         }
 
-        [Test]
+        [TestCase(5,2,25)]
+        [TestCase(2, -2, 0.25)]
+        [TestCase(-2, 3, -8)]
+        [TestCase(2.5, 3, 15.625)]
+        [TestCase(-1, -3, -1)]
+        [TestCase(0.5, 2, 0.25)]
+        [TestCase(-0.5, 2, -0.25)]
         [Category("Power")]
-        public void Power5Exp2_100()
+        public void PowerOfPositivesAndNegatives(double x, double exp, double result)
         {
-            Assert.AreEqual(_testCalculator.power(5, 2), 25);
+            Assert.AreEqual(_testCalculator.power(x, exp), result);
         }
 
-        [Test]
-        [Category("Power")]
-        public void Power2ExpNegative2_0Dot25()
-        {
-            Assert.AreEqual(_testCalculator.power(2, -2), 0.25);
-        }
-
-        [Test]
-        [Category("Power")]
-        public void PowerNegative2Exp3_Negative8()
-        {
-            Assert.AreEqual(_testCalculator.power(-2, 3), -8);
-        }
-
-        [Test]
-        [Category("Power")]
-        public void Power2Dot5Exp3_Negative8()
-        {
-            Assert.AreEqual(_testCalculator.power(2.5, 3), 15.625);
-        }
     }
 }
