@@ -1,4 +1,5 @@
 using Calculator;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 
@@ -17,6 +18,8 @@ namespace TestProgram
         [TestCase(200, 100, 300)]
         [TestCase(100, -50, 50)]
         [TestCase(-50, 100, 50)]
+        [TestCase(15.8, 14, 29.8)]
+        [TestCase(14,15.8,29.8)]
         [TestCase(10.75, -5.5, 5.25)]
         [TestCase(-10.75, 5.5, -5.25)]
         [Category("Add")]
