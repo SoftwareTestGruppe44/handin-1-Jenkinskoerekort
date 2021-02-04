@@ -64,25 +64,26 @@ namespace TestProgram
         {
             Assert.AreEqual(_testCalculator.Subtract(30.4, 20.2), 10.2);
         }
-        [Test]
-        [Category("Multiply")]
-        public void Multiply2and5_10()
-        {
-            Assert.AreEqual(_testCalculator.Multiply(2, 5), 10);
-        }
 
         [Test]
         [Category("Multiply")]
-        public void MultiplyNegative5andNegative4_20()
+        [TestCase(5, 10, 50)]
+        [TestCase(10, 5, 50)]
+        [TestCase(5.5,10.5,57.75)]
+        [TestCase(10.5, 5.5, 57.75)]
+        [TestCase(-5, -4, 20)]
+        [TestCase(-4, -5, 20)]
+        [TestCase(-5.5, -10.5, 57.75)]
+        [TestCase(-10.5, -5.5, 57.75)]
+        [TestCase(10, -10, -100)]
+        [TestCase(-10,10,-100)]
+        [TestCase(10, -10.5, -105)]
+        [TestCase(-10.5, 10, -105)]
+        [TestCase(10.5, -5, -52.5)]
+        [TestCase(-5, 10.5, -52.5)]
+        public void Multiply_PositiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
-            Assert.AreEqual(_testCalculator.Multiply(-5, -4), 20);
-        }
-
-        [Test]
-        [Category("Multiply")]
-        public void Multiply10andNegative10_Negative100()
-        {
-            Assert.AreEqual(_testCalculator.Multiply(10, -10), -100);
+            Assert.AreEqual(_testCalculator.Multiply(a, b), result);
         }
 
         [Test]
