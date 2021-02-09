@@ -12,6 +12,7 @@
 *.v2
 *.manifest
 *.testlog
+*.sln.DotSettings.user
 debug/
 bin/
 obj/
