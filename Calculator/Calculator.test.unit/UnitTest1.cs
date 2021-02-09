@@ -149,5 +149,20 @@ namespace Calculator.test.unit
             _testCalculator.Power(a, b);
             Assert.AreEqual(_testCalculator.Accumulator, result);
         }
+
+        [TestCase(5, 5, 10)]
+        [TestCase(5, -5, 0)]
+        [TestCase(-5, 5, 0)]
+        [TestCase(-5, -5, -10)]
+        [TestCase(5.5, 5.5, 11)]
+        [TestCase(7, -5.5, 1.5)]
+        [TestCase(-5.5, 7, 1.5)]
+        [TestCase(-5.5, -5.5, -11)]
+        [Category("Overload - Add")]
+        public void Overload_AddTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        {
+            _testCalculator.Accumulator = a;
+            Assert.AreEqual(_testCalculator.Add(b), result);
+        }
     }
 }
