@@ -172,5 +172,21 @@ namespace Calculator.test.unit
         {
             Assert.That(() => _testCalculator.Divide(dividend, divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
         }
+
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(-10)]
+        [TestCase(0)]
+        public void Clear_SetAccumulatorAndClear_AccumulatorIsZero(double acc)
+        {
+            //Arrange
+            _testCalculator.Accumulator = acc;
+
+            //Act
+            _testCalculator.Clear();
+
+            //Assert
+            Assert.AreEqual(_testCalculator.Accumulator, 0);
+        }
     }
 }

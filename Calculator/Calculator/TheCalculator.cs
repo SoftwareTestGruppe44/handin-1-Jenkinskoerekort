@@ -40,5 +40,10 @@ namespace Calculator
                 throw new ArgumentOutOfRangeException("divisor = 0 is not allowed");
             return dividend / divisor;
         }
+
+        public void Clear()
+        {
+            Accumulator = 0;
+        }
     }
 }
