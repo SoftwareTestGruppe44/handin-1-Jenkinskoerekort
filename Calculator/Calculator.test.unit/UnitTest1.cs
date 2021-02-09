@@ -180,5 +180,41 @@ namespace Calculator.test.unit
             _testCalculator.Accumulator = a;
             Assert.AreEqual(_testCalculator.Subtract(b), result);
         }
+        [TestCase(10, 5, 2)]
+        [TestCase(5, 10, 0.5)]
+        [TestCase(-10, 5, -2)]
+        [TestCase(5, -10, -0.5)]
+        [TestCase(4.8, 4, 1.2)]
+        [TestCase(4, 4.8, 0.8)]
+        [TestCase(-5, -10, 0.5)]
+        [TestCase(-10, -5, 2)]
+        [Category("Divide")]
+        public void Divide_PositiveAndNegativeNumbers_ResultIsRight(double dividend, double divisor, double result)
+        {
+            Assert.AreEqual(Math.Round(_testCalculator.Divide(dividend, divisor), 1), Math.Round(result, 1));
+        }
+
+        [TestCase(10, 0)]
+        [TestCase(-10, 0)]
+        [TestCase(0, 0)]
+        [Category("Divide, Exception test")]
+        public void Divide_DivideWithZero_ResultIsExceptionThrown(double dividend, double divisor)
+        {
+            Assert.That(() => _testCalculator.Divide(dividend, divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
+        }
+
+        [TestCase(5, 2, 25)]
+        [TestCase(2, -2, 0.25)]
+        [TestCase(-2, 3, -8)]
+        [TestCase(2.5, 3, 15.625)]
+        [TestCase(-1, -3, -1)]
+        [TestCase(0.5, 2, 0.25)]
+        [TestCase(-0.5, 2, 0.25)]
+        [Category("Overload - Power")]
+        public void Overload_PowerTwoNumberAndGet_ResultIsRight(double a, double b,  double result)
+        {
+            _testCalculator.Accumulator = a;
+            Assert.AreEqual(_testCalculator.Power(b), result);
+        }
     }
 }
