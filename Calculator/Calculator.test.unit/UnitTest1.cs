@@ -19,6 +19,8 @@ namespace Calculator.test.unit
         [TestCase(14,15.8,29.8)]
         [TestCase(10.75, -5.5, 5.25)]
         [TestCase(-10.75, 5.5, -5.25)]
+        [TestCase(-45.5, -54.5, -100)]
+        [TestCase(-54.5,-45.5,-100)]
         [Category("Add")]
         public void Add_positiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
