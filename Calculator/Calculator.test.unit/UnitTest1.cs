@@ -160,7 +160,7 @@ namespace Calculator.test.unit
         [TestCase(-5.5, 7, 1.5)]
         [TestCase(-5.5, -5.5, -11)]
         [Category("Overload - Add")]
-        public void Overload_AddTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void AddOverload_PositiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
             _testCalculator.Accumulator = a;
             Assert.AreEqual(_testCalculator.Add(b), result);
@@ -175,7 +175,7 @@ namespace Calculator.test.unit
         [TestCase(-30.5, -25, -5.5)]
         [TestCase(-20.8, -15.3, -5.5)]
         [Category("Overload - Subtract")]
-        public void Overload_SubtractTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void SubtractOverload_PositiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
             _testCalculator.Accumulator = a;
             Assert.AreEqual(_testCalculator.Subtract(b), result);
