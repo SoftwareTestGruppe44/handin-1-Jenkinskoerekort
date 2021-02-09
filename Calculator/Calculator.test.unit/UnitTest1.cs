@@ -1,9 +1,6 @@
-using Calculator;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 
-namespace TestProgram
+namespace Calculator.test.unit
 {
     public class CalculatorTests
     {
@@ -66,7 +63,7 @@ namespace TestProgram
         [TestCase(2.5, 3, 15.625)]
         [TestCase(-1, -3, -1)]
         [TestCase(0.5, 2, 0.25)]
-        [TestCase(-0.5, 2, -0.25)]
+        [TestCase(-0.5, 2, 0.25)]
         [Category("Power")]
         public void PowerOfPositivesAndNegatives(double x, double exp, double result)
         {
