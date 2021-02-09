@@ -174,7 +174,7 @@ namespace Calculator.test.unit
         [TestCase(3.5, -1.2, 4.7)]
         [TestCase(-30.5, -25, -5.5)]
         [TestCase(-20.8, -15.3, -5.5)]
-        [Category("Accumulator - Subtract")]
+        [Category("Overload - Subtract")]
         public void Overload_SubtractTwoNumberAndGet_ResultIsRight(double a, double b, double result)
         {
             _testCalculator.Accumulator = a;
