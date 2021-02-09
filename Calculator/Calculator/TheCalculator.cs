@@ -33,5 +33,11 @@ namespace Calculator
             Accumulator = result;
             return result;
         }
+
+        public double Power(double exponent)
+        {
+            var result = Power(Accumulator, exponent);
+            return result;
+        }
     }
 }
