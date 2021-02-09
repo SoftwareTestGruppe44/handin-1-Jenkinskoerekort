@@ -52,7 +52,14 @@ namespace Calculator
         {
             if (divisor == 0)
                 throw new ArgumentOutOfRangeException("divisor = 0 is not allowed");
-            return dividend / divisor;
+            var result = dividend / divisor;
+            Accumulator = result;
+            return result;
+        }
+
+        public double Divide(double divisor)
+        {
+            return Divide(Accumulator, divisor);
         }
 
         public double Power(double exponent)

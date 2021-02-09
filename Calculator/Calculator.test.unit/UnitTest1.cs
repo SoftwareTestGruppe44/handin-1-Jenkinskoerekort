@@ -233,5 +233,36 @@ namespace Calculator.test.unit
             //Assert
             Assert.AreEqual(_testCalculator.Accumulator, 0);
         }
+
+        [TestCase(10, 5, 2)]
+        [TestCase(5, 10, 0.5)]
+        [TestCase(-10, 5, -2)]
+        [TestCase(5, -10, -0.5)]
+        [TestCase(4.8, 4, 1.2)]
+        [TestCase(4, 4.8, 0.8)]
+        [TestCase(-5, -10, 0.5)]
+        [TestCase(-10, -5, 2)]
+        [Category("Overload - Divide")]
+        public void DivideOverload_PositiveAndNegativeNumbers_ResultIsRight(double acc, double divisor,
+            double result)
+        {
+            //Act
+            _testCalculator.Accumulator = acc;
+
+            //Assert
+            Assert.AreEqual(Math.Round(_testCalculator.Divide(divisor),1), result);
+        }
+
+        [TestCase(10, 0)]
+        [TestCase(-10, 0)]
+        [TestCase(0, 0)]
+        public void DivideOverload_DivideWithZero_ExceptionIsThrown(double acc, double divisor)
+        {
+            //Act
+            _testCalculator.Accumulator = acc;
+
+            //Assert
+            Assert.That(()=> _testCalculator.Divide(divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
+        }
     }
 }
