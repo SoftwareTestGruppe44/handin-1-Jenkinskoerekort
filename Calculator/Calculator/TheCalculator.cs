@@ -23,5 +23,12 @@ namespace Calculator
         {
             return Math.Pow(x, exp);
         }
+
+        public double Divide(double dividend, double divisor)
+        {
+            if (divisor == 0)
+                throw new ArgumentOutOfRangeException("divisor = 0 is not allowed");
+            return dividend / divisor;
+        }
     }
 }
