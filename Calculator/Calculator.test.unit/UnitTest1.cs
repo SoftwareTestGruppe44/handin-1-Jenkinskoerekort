@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace Calculator.test.unit
@@ -149,6 +150,5 @@ namespace Calculator.test.unit
             _testCalculator.Power(a, b);
             Assert.AreEqual(_testCalculator.Accumulator, result);
         }
-
     }
 }
