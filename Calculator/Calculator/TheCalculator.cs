@@ -4,24 +4,34 @@ namespace Calculator
 {
     public class TheCalculator
     {
+        public double Accumulator { get; set; } = 0;
+
         public double Add(double a, double b)
         {
-            return a + b;
+            var result = a + b;
+            Accumulator = result;
+            return result;
         }
 
         public double Subtract(double a, double b)
         {
-            return a - b;
+            var result = a - b;
+            Accumulator = result;
+            return result;
         }
 
         public double Multiply(double a, double b)
         {
-            return a * b;
+            var result = a * b;
+            Accumulator = result;
+            return result;
         }
 
-        public double power(double x, double exp)
+        public double Power(double x, double exp)
         {
-            return Math.Pow(x, exp);
+            var result = Math.Pow(x, exp);
+            Accumulator = result;
+            return result;
         }
     }
 }
