@@ -150,6 +150,36 @@ namespace Calculator.test.unit
             _testCalculator.Power(a, b);
             Assert.AreEqual(_testCalculator.Accumulator, result);
         }
+
+        [TestCase(5, 5, 10)]
+        [TestCase(5, -5, 0)]
+        [TestCase(-5, 5, 0)]
+        [TestCase(-5, -5, -10)]
+        [TestCase(5.5, 5.5, 11)]
+        [TestCase(7, -5.5, 1.5)]
+        [TestCase(-5.5, 7, 1.5)]
+        [TestCase(-5.5, -5.5, -11)]
+        [Category("Overload - Add")]
+        public void Overload_AddTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        {
+            _testCalculator.Accumulator = a;
+            Assert.AreEqual(_testCalculator.Add(b), result);
+        }
+
+        [TestCase(300, 100, 200)]
+        [TestCase(100, 300, -200)]
+        [TestCase(30, -10, 40)]
+        [TestCase(-30, -20, -10)]
+        [TestCase(30.4, 20.2, 10.2)]
+        [TestCase(3.5, -1.2, 4.7)]
+        [TestCase(-30.5, -25, -5.5)]
+        [TestCase(-20.8, -15.3, -5.5)]
+        [Category("Overload - Subtract")]
+        public void Overload_SubtractTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        {
+            _testCalculator.Accumulator = a;
+            Assert.AreEqual(_testCalculator.Subtract(b), result);
+        }
         [TestCase(10, 5, 2)]
         [TestCase(5, 10, 0.5)]
         [TestCase(-10, 5, -2)]

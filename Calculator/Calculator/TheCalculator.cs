@@ -27,6 +27,13 @@ namespace Calculator
             return result;
         }
 
+        public double Subtract(double subtractor)
+        {
+            var result = Subtract(Accumulator,subtractor);
+            Accumulator = result;
+            return result;
+        }
+
         public double Multiply(double a, double b)
         {
             var result = a * b;
