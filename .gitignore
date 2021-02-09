@@ -4,5 +4,12 @@
 *.pdb
 *.user
 *.obj
-bin/
-obj/
+*.cache
+*.assts.json
+*.props
+*.dgspec.jsoon
+*.suo
+*.v2
+*/debug/
+*/bin/
+*/obj/
