@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 
-namespace Calculator.test.unit
+namespace Calculator.Test.Unit
 {
     public class CalculatorTests
     {
@@ -88,7 +88,7 @@ namespace Calculator.test.unit
         [Category("Divide")]
         public void Divide_PositiveAndNegativeNumbers_ResultIsRight(double dividend, double divisor, double result)
         {
-            Assert.AreEqual(Math.Round(_testCalculator.Divide(dividend, divisor), 1), Math.Round(result, 1));
+            Assert.AreEqual(Math.Round(_testCalculator.Divide(dividend, divisor), 1), result);
         }
 
         [TestCase(10, 0)]
@@ -197,7 +197,20 @@ namespace Calculator.test.unit
             Assert.AreEqual(_testCalculator.Accumulator, result);
         }
 
-        //Insert accumulator divide
+        [TestCase(10, 5, 2)]
+        [TestCase(5, 10, 0.5)]
+        [TestCase(-10, 5, -2)]
+        [TestCase(5, -10, -0.5)]
+        [TestCase(4.8, 4, 1.2)]
+        [TestCase(4, 4.8, 0.8)]
+        [TestCase(-5, -10, 0.5)]
+        [TestCase(-10, -5, 2)]
+        [Category("Accumulator - Divide")]
+        public void Accumulator_DivideTwoNumbersAndGet_AccumulatorIsSetCorrect(double dividend, double divisor, double result)
+        {
+            _testCalculator.Divide(dividend, divisor);
+            Assert.AreEqual(Math.Round(_testCalculator.Accumulator, 1), result);
+        }
 
         //Test of overloaded methods.
 
