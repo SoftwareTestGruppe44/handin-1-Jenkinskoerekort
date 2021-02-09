@@ -27,6 +27,7 @@ namespace Calculator.test.unit
 
         [Category("Subtract")]
         [TestCase(300, 100, 200)]
+        [TestCase(100, 300, -200)]
         [TestCase(30, -10, 40)]
         [TestCase(-30, -20, -10)]
         [TestCase(30.4, 20.2, 10.2)]
