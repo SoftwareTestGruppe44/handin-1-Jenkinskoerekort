@@ -62,11 +62,18 @@ namespace Calculator
             return Divide(Accumulator, divisor);
         }
 
+        public double Multiply(double multiplier)
+        {
+            var result = Multiply(Accumulator, multiplier);
+            return result;
+        }
+
         public double Power(double exponent)
         {
             var result = Power(Accumulator, exponent);
             return result;
         }
+
 
         public void Clear()
         {

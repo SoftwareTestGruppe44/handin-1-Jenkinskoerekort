@@ -160,7 +160,7 @@ namespace Calculator.test.unit
         [TestCase(-5.5, 7, 1.5)]
         [TestCase(-5.5, -5.5, -11)]
         [Category("Overload - Add")]
-        public void Overload_AddTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void AddOverload_PositiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
             _testCalculator.Accumulator = a;
             Assert.AreEqual(_testCalculator.Add(b), result);
@@ -175,7 +175,7 @@ namespace Calculator.test.unit
         [TestCase(-30.5, -25, -5.5)]
         [TestCase(-20.8, -15.3, -5.5)]
         [Category("Overload - Subtract")]
-        public void Overload_SubtractTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void SubtractOverload_PositiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
             _testCalculator.Accumulator = a;
             Assert.AreEqual(_testCalculator.Subtract(b), result);
@@ -201,6 +201,27 @@ namespace Calculator.test.unit
         public void Divide_DivideWithZero_ResultIsExceptionThrown(double dividend, double divisor)
         {
             Assert.That(() => _testCalculator.Divide(dividend, divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
+        }
+
+        [TestCase(5, 10, 50)]
+        [TestCase(10, 5, 50)]
+        [TestCase(5.5, 10.5, 57.75)]
+        [TestCase(10.5, 5.5, 57.75)]
+        [TestCase(-5, -4, 20)]
+        [TestCase(-4, -5, 20)]
+        [TestCase(-5.5, -10.5, 57.75)]
+        [TestCase(-10.5, -5.5, 57.75)]
+        [TestCase(10, -10, -100)]
+        [TestCase(-10, 10, -100)]
+        [TestCase(10, -10.5, -105)]
+        [TestCase(-10.5, 10, -105)]
+        [TestCase(10.5, -5, -52.5)]
+        [TestCase(-5, 10.5, -52.5)]
+        [Category("Overload - Multiply")]
+        public void Overload_MultiplyTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        {
+            _testCalculator.Accumulator = a;
+            Assert.AreEqual(_testCalculator.Multiply(b), result);
         }
 
         [TestCase(5, 2, 25)]
