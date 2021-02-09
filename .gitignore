@@ -10,6 +10,8 @@
 *.dgspec.jsoon
 *.suo
 *.v2
+*.manifest
+*.testlog
 debug/
 bin/
 obj/
