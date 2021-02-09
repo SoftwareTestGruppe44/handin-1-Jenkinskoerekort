@@ -167,6 +167,7 @@ namespace Calculator.test.unit
         [TestCase(10, 0)]
         [TestCase(-10, 0)]
         [TestCase(0, 0)]
+        [Category("Divide, Exception test")]
         public void Divide_DivideWithZero_ResultIsExceptionThrown(double dividend, double divisor)
         {
             Assert.That(() => _testCalculator.Divide(dividend, divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
