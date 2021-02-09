@@ -34,6 +34,13 @@ namespace Calculator
             return result;
         }
 
+        public double Divide(double dividend, double divisor)
+        {
+            if (divisor == 0)
+                throw new ArgumentOutOfRangeException("divisor = 0 is not allowed");
+            return dividend / divisor;
+        }
+
         public double Power(double exponent)
         {
             var result = Power(Accumulator, exponent);
