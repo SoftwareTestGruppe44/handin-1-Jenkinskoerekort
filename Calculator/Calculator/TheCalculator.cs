@@ -13,6 +13,13 @@ namespace Calculator
             return result;
         }
 
+        public double Add(double addend)
+        {
+            var result = Add(Accumulator, addend);
+            Accumulator = result;
+            return result;
+        }
+
         public double Subtract(double a, double b)
         {
             var result = a - b;
