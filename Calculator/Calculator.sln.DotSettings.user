@@ -4,6 +4,7 @@
     &lt;Category&gt;Add&lt;/Category&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;NUnit3x::73D8C0E6-47D6-462E-AAD1-F13CC073610E::.NETCoreApp,Version=v3.1::TestProgram.CalculatorTests.Subtract_PositiveAndNegative_ResultIsRight&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::73D8C0E6-47D6-462E-AAD1-F13CC073610E::.NETCoreApp,Version=v3.1::TestProgram.CalculatorTests.PowerOfPositivesAndNegatives&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
