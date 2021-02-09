@@ -221,6 +221,7 @@ namespace Calculator.test.unit
         [TestCase(2)]
         [TestCase(-10)]
         [TestCase(0)]
+        [Category("Clear")]
         public void Clear_SetAccumulatorAndClear_AccumulatorIsZero(double acc)
         {
             //Arrange
