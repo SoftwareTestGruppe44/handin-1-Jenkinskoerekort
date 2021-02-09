@@ -173,6 +173,20 @@ namespace Calculator.test.unit
             Assert.That(() => _testCalculator.Divide(dividend, divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
         }
 
+        [TestCase(5, 2, 25)]
+        [TestCase(2, -2, 0.25)]
+        [TestCase(-2, 3, -8)]
+        [TestCase(2.5, 3, 15.625)]
+        [TestCase(-1, -3, -1)]
+        [TestCase(0.5, 2, 0.25)]
+        [TestCase(-0.5, 2, 0.25)]
+        [Category("Overload - Power")]
+        public void Overload_PowerTwoNumberAndGet_ResultIsRight(double a, double b,  double result)
+        {
+            _testCalculator.Accumulator = a;
+            Assert.AreEqual(_testCalculator.Power(b), result);
+        }
+
         [TestCase(1)]
         [TestCase(2)]
         [TestCase(-10)]

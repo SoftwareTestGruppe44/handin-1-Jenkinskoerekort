@@ -13,6 +13,13 @@ namespace Calculator
             return result;
         }
 
+        public double Add(double addend)
+        {
+            var result = Add(Accumulator, addend);
+            Accumulator = result;
+            return result;
+        }
+
         public double Subtract(double a, double b)
         {
             var result = a - b;
@@ -39,6 +46,12 @@ namespace Calculator
             if (divisor == 0)
                 throw new ArgumentOutOfRangeException("divisor = 0 is not allowed");
             return dividend / divisor;
+        }
+
+        public double Power(double exponent)
+        {
+            var result = Power(Accumulator, exponent);
+            return result;
         }
 
         public void Clear()
