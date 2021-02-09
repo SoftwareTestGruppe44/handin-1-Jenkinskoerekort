@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
+      "projectUniqueName": "C:\\Github Projekter\\4. Semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
       "projectName": "Calculator",
-      "projectPath": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
+      "projectPath": "C:\\Github Projekter\\4. Semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj",
       "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\obj\\",
+      "outputPath": "C:\\Github Projekter\\4. Semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",

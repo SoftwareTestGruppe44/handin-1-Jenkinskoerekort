@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "onlIkfYOb7j8pOHRSRD2u/ULJ/FVazn+IYxw0fv0Xt5asaqMKXQmn6If4Cf4JXAYWdOnwcgLCLhUojeCYIJB3g==",
+  "dgSpecHash": "lr8G45J/cROO7TlNVDdbMOtqMbWNxfMRSy/4dnArjctO377ZEjEs2p8WEvWeeVZfGbmYFl+iJ1hZM87PV+fzyw==",
   "success": true,
-  "projectFilePath": "C:\\IKT - 4. semester\\4. semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
+  "projectFilePath": "C:\\Github Projekter\\4. Semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
