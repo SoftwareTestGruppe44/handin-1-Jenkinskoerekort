@@ -203,6 +203,27 @@ namespace Calculator.test.unit
             Assert.That(() => _testCalculator.Divide(dividend, divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
         }
 
+        [TestCase(5, 10, 50)]
+        [TestCase(10, 5, 50)]
+        [TestCase(5.5, 10.5, 57.75)]
+        [TestCase(10.5, 5.5, 57.75)]
+        [TestCase(-5, -4, 20)]
+        [TestCase(-4, -5, 20)]
+        [TestCase(-5.5, -10.5, 57.75)]
+        [TestCase(-10.5, -5.5, 57.75)]
+        [TestCase(10, -10, -100)]
+        [TestCase(-10, 10, -100)]
+        [TestCase(10, -10.5, -105)]
+        [TestCase(-10.5, 10, -105)]
+        [TestCase(10.5, -5, -52.5)]
+        [TestCase(-5, 10.5, -52.5)]
+        [Category("Overload - Multiply")]
+        public void Overload_MultiplyTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        {
+            _testCalculator.Accumulator = a;
+            Assert.AreEqual(_testCalculator.Multiply(b), result);
+        }
+
         [TestCase(5, 2, 25)]
         [TestCase(2, -2, 0.25)]
         [TestCase(-2, 3, -8)]
