@@ -69,7 +69,7 @@ namespace Calculator.test.unit
         [TestCase(0.5, 2, 0.25)]
         [TestCase(-0.5, 2, 0.25)]
         [Category("Power")]
-        public void PowerOfPositivesAndNegatives(double x, double exp, double result)
+        public void Power_PositiveAndNegativeNumbers_ResultIsRight(double x, double exp, double result)
         {
             Assert.AreEqual(_testCalculator.Power(x, exp), result);
         }
