@@ -4639,19 +4639,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BL\\.nuget\\packages\\": {}
+    "C:\\Users\\rasmu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BL\\Documents\\GitHub\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
+      "projectUniqueName": "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
       "projectName": "Calculator.test.unit",
-      "projectPath": "C:\\Users\\BL\\Documents\\GitHub\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
-      "packagesPath": "C:\\Users\\BL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BL\\Documents\\GitHub\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\obj\\",
+      "projectPath": "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\Calculator.test.unit.csproj",
+      "packagesPath": "C:\\Users\\rasmu\\.nuget\\packages\\",
+      "outputPath": "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator.test.unit\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\BL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rasmu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4665,8 +4665,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\BL\\Documents\\GitHub\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj": {
-              "projectPath": "C:\\Users\\BL\\Documents\\GitHub\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj"
+            "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj": {
+              "projectPath": "C:\\4-semester\\SWT\\handin-1-Jenkinskoerekort\\Calculator\\Calculator\\Calculator.csproj"
             }
           }
         }
