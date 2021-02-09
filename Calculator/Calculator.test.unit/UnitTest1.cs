@@ -277,6 +277,7 @@ namespace Calculator.test.unit
         [TestCase(10, 0)]
         [TestCase(-10, 0)]
         [TestCase(0, 0)]
+        [Category("Overload - Divide, Exception Thrown")]
         public void DivideOverload_DivideWithZero_ExceptionIsThrown(double acc, double divisor)
         {
             //Act
