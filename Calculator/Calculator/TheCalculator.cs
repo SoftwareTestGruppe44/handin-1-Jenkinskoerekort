@@ -41,23 +41,16 @@ namespace Calculator
             return result;
         }
 
+        public double Multiply(double multiplier)
+        {
+            var result = Multiply(Accumulator, multiplier);
+            return result;
+        }
+
         public double Power(double x, double exp)
         {
             var result = Math.Pow(x, exp);
             Accumulator = result;
-            return result;
-        }
-
-        public double Divide(double dividend, double divisor)
-        {
-            if (divisor == 0)
-                throw new ArgumentOutOfRangeException("divisor = 0 is not allowed");
-            return dividend / divisor;
-        }
-
-        public double Multiply(double multiplier)
-        {
-            var result = Multiply(Accumulator, multiplier);
             return result;
         }
 
@@ -67,6 +60,19 @@ namespace Calculator
             return result;
         }
 
+        public double Divide(double dividend, double divisor)
+        {
+            if (divisor == 0)
+                throw new ArgumentOutOfRangeException("Divisor = 0 is not allowed");
+            var result = dividend / divisor;
+            Accumulator = result;
+            return result;
+        }
+
+        public double Divide(double divisor)
+        {
+            return Divide(Accumulator, divisor);
+        }
 
         public void Clear()
         {

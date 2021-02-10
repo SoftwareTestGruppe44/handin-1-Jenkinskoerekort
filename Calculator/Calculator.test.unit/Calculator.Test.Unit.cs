@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 
-namespace Calculator.test.unit
+namespace Calculator.Test.Unit
 {
     public class CalculatorTests
     {
@@ -11,6 +11,8 @@ namespace Calculator.test.unit
         {
             _testCalculator = new TheCalculator();
         }
+
+        //Initial test for each method.
 
         [TestCase(100, 200, 300)]
         [TestCase(200, 100, 300)]
@@ -75,6 +77,31 @@ namespace Calculator.test.unit
             Assert.AreEqual(_testCalculator.Power(x, exp), result);
         }
 
+        [TestCase(10, 5, 2)]
+        [TestCase(5, 10, 0.5)]
+        [TestCase(-10, 5, -2)]
+        [TestCase(5, -10, -0.5)]
+        [TestCase(4.8, 4, 1.2)]
+        [TestCase(4, 4.8, 0.8)]
+        [TestCase(-5, -10, 0.5)]
+        [TestCase(-10, -5, 2)]
+        [Category("Divide")]
+        public void Divide_PositiveAndNegativeNumbers_ResultIsRight(double dividend, double divisor, double result)
+        {
+            Assert.AreEqual(Math.Round(_testCalculator.Divide(dividend, divisor), 1), result);
+        }
+
+        [TestCase(10, 0)]
+        [TestCase(-10, 0)]
+        [TestCase(0, 0)]
+        [Category("Divide, Exception test")]
+        public void Divide_DivideWithZero_ResultIsExceptionThrown(double dividend, double divisor)
+        {
+            Assert.That(() => _testCalculator.Divide(dividend, divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
+        }
+
+        // Test of accumulator and clear method.
+
         [TestCase(5,5)]
         [TestCase(-5,-5)]
         [TestCase(5.5,5.5)]
@@ -86,6 +113,25 @@ namespace Calculator.test.unit
             Assert.AreEqual(_testCalculator.Accumulator,result);
         }
 
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(-10)]
+        [TestCase(0)]
+        [Category("Clear")]
+        public void Clear_SetAccumulatorAndClear_AccumulatorIsZero(double acc)
+        {
+            //Arrange
+            _testCalculator.Accumulator = acc;
+
+            //Act
+            _testCalculator.Clear();
+
+            //Assert
+            Assert.AreEqual(_testCalculator.Accumulator, 0);
+        }
+
+        //Tests where it is checked, that  accumulator is set properly in each method.
+
         [TestCase(5, 5,10)]
         [TestCase(5, -5, 0)]
         [TestCase(-5, 5, 0)]
@@ -95,7 +141,7 @@ namespace Calculator.test.unit
         [TestCase(-5.5, 7, 1.5)]
         [TestCase(-5.5, -5.5,-11)]
         [Category("Accumulator - Add")]
-        public void Accumulator_AddTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void Accumulator_AddTwoNumberAndGet_AccumulatorIsSetCorrect(double a, double b, double result)
         {
             _testCalculator.Add(a, b);
             Assert.AreEqual(_testCalculator.Accumulator, result);
@@ -110,7 +156,7 @@ namespace Calculator.test.unit
         [TestCase(-30.5, -25, -5.5)]
         [TestCase(-20.8, -15.3, -5.5)]
         [Category("Accumulator - Subtract")]
-        public void Accumulator_SubtractTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void Accumulator_SubtractTwoNumberAndGet_AccumulatorIsSetCorrect(double a, double b, double result)
         {
             _testCalculator.Subtract(a, b);
             Assert.AreEqual(_testCalculator.Accumulator, result);
@@ -131,7 +177,7 @@ namespace Calculator.test.unit
         [TestCase(10.5, -5, -52.5)]
         [TestCase(-5, 10.5, -52.5)]
         [Category("Accumulator - Multiply")]
-        public void Accumulator_MultiplyTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void Accumulator_MultiplyTwoNumberAndGet_AccumulatorIsSetCorrect(double a, double b, double result)
         {
             _testCalculator.Multiply(a, b);
             Assert.AreEqual(_testCalculator.Accumulator, result);
@@ -145,11 +191,28 @@ namespace Calculator.test.unit
         [TestCase(0.5, 2, 0.25)]
         [TestCase(-0.5, 2, 0.25)]
         [Category("Accumulator - Power")]
-        public void Accumulator_PowerTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void Accumulator_PowerTwoNumberAndGet_AccumulatorIsSetCorrect(double a, double b, double result)
         {
             _testCalculator.Power(a, b);
             Assert.AreEqual(_testCalculator.Accumulator, result);
         }
+
+        [TestCase(10, 5, 2)]
+        [TestCase(5, 10, 0.5)]
+        [TestCase(-10, 5, -2)]
+        [TestCase(5, -10, -0.5)]
+        [TestCase(4.8, 4, 1.2)]
+        [TestCase(4, 4.8, 0.8)]
+        [TestCase(-5, -10, 0.5)]
+        [TestCase(-10, -5, 2)]
+        [Category("Accumulator - Divide")]
+        public void Accumulator_DivideTwoNumbersAndGet_AccumulatorIsSetCorrect(double dividend, double divisor, double result)
+        {
+            _testCalculator.Divide(dividend, divisor);
+            Assert.AreEqual(Math.Round(_testCalculator.Accumulator, 1), result);
+        }
+
+        //Test of overloaded methods.
 
         [TestCase(5, 5, 10)]
         [TestCase(5, -5, 0)]
@@ -160,7 +223,7 @@ namespace Calculator.test.unit
         [TestCase(-5.5, 7, 1.5)]
         [TestCase(-5.5, -5.5, -11)]
         [Category("Overload - Add")]
-        public void Overload_AddTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void AddOverload_PositiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
             _testCalculator.Accumulator = a;
             Assert.AreEqual(_testCalculator.Add(b), result);
@@ -175,33 +238,12 @@ namespace Calculator.test.unit
         [TestCase(-30.5, -25, -5.5)]
         [TestCase(-20.8, -15.3, -5.5)]
         [Category("Overload - Subtract")]
-        public void Overload_SubtractTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void SubtractOverload_PositiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
             _testCalculator.Accumulator = a;
             Assert.AreEqual(_testCalculator.Subtract(b), result);
         }
-        [TestCase(10, 5, 2)]
-        [TestCase(5, 10, 0.5)]
-        [TestCase(-10, 5, -2)]
-        [TestCase(5, -10, -0.5)]
-        [TestCase(4.8, 4, 1.2)]
-        [TestCase(4, 4.8, 0.8)]
-        [TestCase(-5, -10, 0.5)]
-        [TestCase(-10, -5, 2)]
-        [Category("Divide")]
-        public void Divide_PositiveAndNegativeNumbers_ResultIsRight(double dividend, double divisor, double result)
-        {
-            Assert.AreEqual(Math.Round(_testCalculator.Divide(dividend, divisor), 1), Math.Round(result, 1));
-        }
-
-        [TestCase(10, 0)]
-        [TestCase(-10, 0)]
-        [TestCase(0, 0)]
-        [Category("Divide, Exception test")]
-        public void Divide_DivideWithZero_ResultIsExceptionThrown(double dividend, double divisor)
-        {
-            Assert.That(() => _testCalculator.Divide(dividend, divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
-        }
+        
 
         [TestCase(5, 10, 50)]
         [TestCase(10, 5, 50)]
@@ -218,7 +260,7 @@ namespace Calculator.test.unit
         [TestCase(10.5, -5, -52.5)]
         [TestCase(-5, 10.5, -52.5)]
         [Category("Overload - Multiply")]
-        public void Overload_MultiplyTwoNumberAndGet_ResultIsRight(double a, double b, double result)
+        public void MultiplyOverload_MultiplyPositiveAndNegativeNumbers_ResultIsRight(double a, double b, double result)
         {
             _testCalculator.Accumulator = a;
             Assert.AreEqual(_testCalculator.Multiply(b), result);
@@ -232,27 +274,42 @@ namespace Calculator.test.unit
         [TestCase(0.5, 2, 0.25)]
         [TestCase(-0.5, 2, 0.25)]
         [Category("Overload - Power")]
-        public void Overload_PowerTwoNumberAndGet_ResultIsRight(double a, double b,  double result)
+        public void PowerOverload_PowerOfPositiveAndNegativeNumbers_ResultIsRight(double a, double b,  double result)
         {
             _testCalculator.Accumulator = a;
             Assert.AreEqual(_testCalculator.Power(b), result);
         }
 
-        [TestCase(1)]
-        [TestCase(2)]
-        [TestCase(-10)]
-        [TestCase(0)]
-        [Category("Clear")]
-        public void Clear_SetAccumulatorAndClear_AccumulatorIsZero(double acc)
+        [TestCase(10, 5, 2)]
+        [TestCase(5, 10, 0.5)]
+        [TestCase(-10, 5, -2)]
+        [TestCase(5, -10, -0.5)]
+        [TestCase(4.8, 4, 1.2)]
+        [TestCase(4, 4.8, 0.8)]
+        [TestCase(-5, -10, 0.5)]
+        [TestCase(-10, -5, 2)]
+        [Category("Overload - Divide")]
+        public void DivideOverload_PositiveAndNegativeNumbers_ResultIsRight(double acc, double divisor,
+            double result)
         {
-            //Arrange
+            //Act
             _testCalculator.Accumulator = acc;
 
+            //Assert
+            Assert.AreEqual(Math.Round(_testCalculator.Divide(divisor),1), result);
+        }
+
+        [TestCase(10, 0)]
+        [TestCase(-10, 0)]
+        [TestCase(0, 0)]
+        [Category("Overload - Divide, Exception Thrown")]
+        public void DivideOverload_DivideWithZero_ExceptionIsThrown(double acc, double divisor)
+        {
             //Act
-            _testCalculator.Clear();
+            _testCalculator.Accumulator = acc;
 
             //Assert
-            Assert.AreEqual(_testCalculator.Accumulator, 0);
+            Assert.That(()=> _testCalculator.Divide(divisor), Throws.TypeOf<ArgumentOutOfRangeException>());
         }
     }
 }
