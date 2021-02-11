@@ -18,3 +18,4 @@
 debug/
 bin/
 obj/
+.vs/slnx.sqlite
