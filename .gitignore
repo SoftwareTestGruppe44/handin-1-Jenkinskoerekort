@@ -13,6 +13,8 @@
 *.manifest
 *.testlog
 *.sln.DotSettings.user
+*.sqlite
+*.json
 debug/
 bin/
 obj/
