@@ -152,6 +152,7 @@ namespace Calculator.Test.Unit
         [TestCase(30, -10, 40)]
         [TestCase(-30, -20, -10)]
         [TestCase(30.4, 20.2, 10.2)]
+        [TestCase(20.2, 30.4, -10.2)]
         [TestCase(3.5, -1.2, 4.7)]
         [TestCase(-30.5, -25, -5.5)]
         [TestCase(-20.8, -15.3, -5.5)]
