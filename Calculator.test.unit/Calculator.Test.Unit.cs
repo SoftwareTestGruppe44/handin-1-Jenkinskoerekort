@@ -147,6 +147,7 @@ namespace Calculator.Test.Unit
             Assert.AreEqual(_testCalculator.Accumulator, result);
         }
 
+
         [TestCase(300, 100, 200)]
         [TestCase(100, 300, -200)]
         [TestCase(30, -10, 40)]
